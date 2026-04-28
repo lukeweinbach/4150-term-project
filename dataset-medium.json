@@ -1,0 +1,102 @@
+[
+  {
+    "prompt": "Fact Pattern: Chloe is 20 and a full-time student. She lives in a dorm but stays with her father, Mark, during breaks. Mark provides 70% of her support. Chloe earned $5,000 from a summer internship and is unmarried. Is Chloe a dependent?",
+    "chosen": "Yes, Chloe is a Qualifying Child (QC) under § 152(c). As a student under age 24, she meets the age test (§ 152(c)(3)(A)(ii)). Her time at school is a temporary absence, satisfying residency with Mark (§ 152(c)(1)(B)). Since she did not provide over half of her own support and is unmarried, she qualifies.",
+    "rejected": "No, Chloe is not a dependent because she is over 19 and her $5,000 income exceeds the gross income limit for a qualifying relative."
+  },
+  {
+    "prompt": "Fact Pattern: Robert supports his mother, Helen, who lives in her own apartment. Helen's total support costs are $20,000. Robert pays $11,000; Helen's social security pays the rest. Helen's gross taxable income is $2,000. Is Helen a dependent?",
+    "chosen": "Yes, Helen is a Qualifying Relative (QR) under § 152(d). Robert provides over half of her support (§ 152(d)(1)(C)), and her gross income is below the exemption amount (§ 152(d)(1)(B)). As a mother, she does not need to live with him to meet the relationship test (§ 152(d)(2)(C)).",
+    "rejected": "No, Helen is not a dependent because she does not share a principal place of abode with the taxpayer for more than half of the year."
+  },
+  {
+    "prompt": "Fact Pattern: Maria is 22 and lived with her boyfriend, Jose, for the entire year. She has no income and Jose provided 100% of her support. Maria is a US citizen. Is Maria Jose's dependent?",
+    "chosen": "Yes, Maria is a Qualifying Relative (QR) under § 152(d)(2)(H). An individual who has the same principal place of abode as the taxpayer and is a member of the household for the entire year satisfies the relationship test, even if they share no familial blood or marriage link.",
+    "rejected": "No, Maria is not Jose's dependent because they do not share a familial relationship defined in § 152(d)(2)(A)-(G)."
+  },
+  {
+    "prompt": "Fact Pattern: David is the 10-year-old son of Sarah's brother. David lives with Sarah all year. His parents earn $40,000 each but do not claim him. Sarah earns $85,000. Can Sarah claim David?",
+    "chosen": "Yes, Sarah can claim David as a QC. Under § 152(c)(4)(C), a non-parent can claim a child if no parent claims him and the taxpayer's AGI ($85,000) is higher than the highest AGI of any parent ($40,000).",
+    "rejected": "No, Sarah cannot claim David because parents always have priority for the dependency claim over non-parents regardless of income."
+  },
+  {
+    "prompt": "Fact Pattern: Oscar is a 24-year-old full-time student. He lives with his parents and earns $3,000. His parents provide all his support. Can they claim him as a Qualifying Child?",
+    "chosen": "No, Oscar is not a QC. Under § 152(c)(3)(A)(ii), a student must not have attained age 24. Since Oscar is 24, he fails the age test for QC, though he may still qualify as a QR if other tests are met.",
+    "rejected": "Yes, Oscar is a QC because the age limit for full-time students is inclusive of age 24 under § 152."
+  },
+  {
+    "prompt": "Fact Pattern: Kevin (22) lives with his grandmother, Rose. He is a full-time student with no income. Kevin has a daughter, Lily, whom he claims as a dependent on his own return. Can Rose claim Kevin?",
+    "chosen": "No, Rose cannot claim Kevin. Under § 152(b)(1), if an individual is a dependent of another taxpayer (Kevin claiming Lily), that individual is treated as having no dependents and cannot be claimed by anyone else.",
+    "rejected": "Yes, Rose can claim Kevin because he meets the age, residency, and support tests to be Rose's Qualifying Child."
+  },
+  {
+    "prompt": "Fact Pattern: Gary supports his 30-year-old cousin, Phil. Phil lives in a different state but Gary provides 70% of his support. Phil's gross income is $2,000. Can Gary claim Phil?",
+    "chosen": "No, Gary cannot claim Phil. A cousin is not listed in § 152(d)(2)(A)-(G). Therefore, a cousin must live with the taxpayer for the entire year under § 152(d)(2)(H) to meet the relationship test.",
+    "rejected": "Yes, Gary can claim Phil because Gary provides over half of Phil's support and Phil's income is below the exemption threshold."
+  },
+  {
+    "prompt": "Fact Pattern: Tina is 18 and lives with her grandmother and mother. The mother earned $12,000; the grandmother earned $45,000. Both claim Tina. Who is entitled to the claim?",
+    "chosen": "The mother is entitled to the claim. Under § 152(c)(4)(A)(i), if a parent and a non-parent both claim a child as a QC, the child is treated as the qualifying child of the parent.",
+    "rejected": "The grandmother is entitled to the claim because her adjusted gross income is higher than the mother's."
+  },
+  {
+    "prompt": "Fact Pattern: Ben provides 60% support for his father, Abe. Abe received $15,000 in non-taxable Social Security and $3,000 in taxable interest. Is Abe Ben's dependent?",
+    "chosen": "Yes, Abe is a QR. For the gross income test (§ 152(d)(1)(B)), only taxable income ($3,000) is counted. For the support test (§ 152(d)(1)(C)), all sources are counted, and Ben still provided over half.",
+    "rejected": "No, Abe is not a dependent because his total income of $18,000 exceeds the maximum gross income allowed for a qualifying relative."
+  },
+  {
+    "prompt": "Fact Pattern: Sofia's aunt, Clara, has $40,000 in expenses. Sofia pays $3,900 (9.75%), her brother pays $18,100, and Clara's son pays $18,000. Both sign waivers for Sofia. Can Sofia claim Clara?",
+    "chosen": "No, Sofia cannot claim Clara. Under § 152(d)(3)(C), a taxpayer in a multiple support agreement must contribute more than 10% of the support. Sofia's 9.75% contribution is insufficient.",
+    "rejected": "Yes, Sofia can claim Clara because the group as a whole provided over 50% of the support and the other members filed written declarations."
+  },
+  {
+    "prompt": "Fact Pattern: Liam is 20 and a full-time student. He receives a $30,000 scholarship for tuition. His father, David, provides $10,000 for room and board. Liam has no other income. Can David claim Liam as a QC?",
+    "chosen": "Yes, David can claim Liam. Under § 152(f)(5), scholarships for a child who is a student are not taken into account for the support test (§ 152(c)(1)(D)). Thus, David is treated as providing 100% of Liam's support.",
+    "rejected": "No, David cannot claim Liam because the $30,000 scholarship means Liam provided more than half of his own support."
+  },
+  {
+    "prompt": "Fact Pattern: Elena is a 20-year-old student living in Mexico. Her uncle, Victor, is a US citizen living in Texas. Victor provides 100% of Elena's support. Elena is a citizen of Mexico. Is Elena a dependent?",
+    "chosen": "Yes, Elena is a QR. While non-citizens are generally excluded (§ 152(b)(3)(A)), there is an exception for residents of a country contiguous to the US (Canada or Mexico). As a niece, she meets the relationship test.",
+    "rejected": "No, Elena is not a dependent because she is not a US citizen and does not reside in the United States."
+  },
+  {
+    "prompt": "Fact Pattern: Mark and Sarah are divorced. Toby (10) lives with Mark for 7 months and Sarah for 5 months. Sarah's AGI is $150,000; Mark's is $40,000. Both claim Toby. Who wins?",
+    "chosen": "Mark wins. Under § 152(c)(4)(B)(i), if parents claim a child and do not file a joint return, the claim goes to the parent with whom the child resided for the longest period of time.",
+    "rejected": "Sarah wins because the tie-breaker rules prioritize the parent with the highest adjusted gross income when both claim the child."
+  },
+  {
+    "prompt": "Fact Pattern: Julia supports her friend, Beth, who moved in on February 1st and stayed through December 31st. Beth had no income and Julia provided all support. Is Beth Julia's dependent?",
+    "chosen": "No, Beth is not a QR. Under § 152(d)(2)(H), a non-relative must have the same principal place of abode and be a member of the household for the entire taxable year. Missing January disqualifies her.",
+    "rejected": "Yes, Beth is a QR because she lived with Julia for more than half the year and Julia provided more than 50% of her support."
+  },
+  {
+    "prompt": "Fact Pattern: Robert, a US citizen, adopts Mei in a non-contiguous foreign country. Mei lives with Robert in that foreign country all year. Mei is not a US citizen. Can Robert claim Mei?",
+    "chosen": "Yes, Robert can claim Mei. § 152(b)(3)(B) provides an exception for an adopted child of a US citizen if the child has the same principal place of abode as the taxpayer for the entire year, regardless of the country.",
+    "rejected": "No, Robert cannot claim Mei because she is not a US citizen and does not reside in a country contiguous to the US."
+  },
+  {
+    "prompt": "Fact Pattern: John provides $12,000 for his girlfriend, Alice. They live together all year in a state where cohabitation is a misdemeanor under an unenforced law. Alice has no income. Can John claim Alice?",
+    "chosen": "No, John cannot claim Alice. Under § 152(f)(3), an individual is not a member of the household if the relationship between the individual and the taxpayer violates local law.",
+    "rejected": "Yes, John can claim Alice because the cohabitation law is unenforced and she otherwise meets all tests for a qualifying relative."
+  },
+  {
+    "prompt": "Fact Pattern: Sam supports his 17-year-old half-sister, Nina, who lives with him. Nina has no income. Does Nina meet the relationship test for a Qualifying Child?",
+    "chosen": "Yes, Nina meets the test. Under § 152(f)(4), the term 'sister' includes a sister by the half-blood. Nina is a sibling under § 152(c)(2)(B).",
+    "rejected": "No, Nina does not meet the QC relationship test because half-siblings only qualify as Qualifying Relatives under § 152(d)."
+  },
+  {
+    "prompt": "Fact Pattern: A 16-year-old, Kevin, was placed with the Miller family by a court order. Kevin lived there for 5 months and the Millers provided all support. Is Kevin their QC?",
+    "chosen": "No, Kevin fails the residency test. While a foster child is a 'child' under § 152(f)(1)(C), they must still live with the taxpayer for more than half the year (over 6 months) per § 152(c)(1)(B).",
+    "rejected": "Yes, Kevin is a QC because he is an eligible foster child placed by a court, satisfying the relationship test."
+  },
+  {
+    "prompt": "Fact Pattern: Victor is 25 and permanently disabled. He lives with his mother and earns no income. Does Victor meet the age requirement for a Qualifying Child?",
+    "chosen": "Yes, Victor meets the age requirement. Under § 152(c)(3)(B), age requirements are waived for an individual who is permanently and totally disabled at any time during the year.",
+    "rejected": "No, Victor is over 24 and not a student, so he must be evaluated as a Qualifying Relative rather than a Qualifying Child."
+  },
+  {
+    "prompt": "Fact Pattern: Mark provides $5,000 for his son, Leo. Mark's ex-wife, Susan, receives $10,000 in alimony and uses $6,000 for Leo's food. Does Mark's alimony count as support provided by him for Leo?",
+    "chosen": "No, it does not. Under § 152(d)(5)(A)(i), alimony payments are not treated as a payment by the payor spouse for the support of any dependent.",
+    "rejected": "Yes, because the funds originated from Mark, they are credited to him for the purposes of the support test."
+  }
+]
