@@ -130,9 +130,9 @@
     "rejected": "No, Arthur is not a blood relative and does not live with Rose, so he fails the residency requirement for non-relatives."
   },
   {
-    "prompt": "Fact Pattern: Sam and Pete support their uncle. Sam pays 45%; Pete pays 45%. Pete signs a declaration for Sam. Sam also claims his own son. Is Sam eligible to claim his uncle?",
-    "chosen": "Yes, Sam is eligible. Under § 152(d)(3), multiple support agreements allow a person contributing over 10% to claim a dependent if others contributing over 10% waive their claim.",
-    "rejected": "No, because Sam already has a dependent (his son), he is ineligible to claim a qualifying relative under § 152(b)(1)."
+    "prompt": "Fact Pattern: Sam and Pete support their uncle. Sam pays 45%; Pete pays 45%. Pete signs a declaration for Sam. However, Sam is a 20-year-old full-time student and his parents claim him as a dependent on their tax return. Is Sam eligible to claim his uncle?",
+    "chosen": "No, Sam is not eligible. Under § 152(b)(1), if an individual is a dependent of another taxpayer, that individual shall be treated as having no dependents. Because Sam's parents claim him, he cannot claim his uncle, regardless of the multiple support agreement.",
+    "rejected": "Yes, Sam is eligible because he contributed more than 10% to the uncle's support and Pete signed a written declaration waiving his claim."
   },
   {
     "prompt": "Fact Pattern: Clara (19) is not a student. She lives with her parents and earns $5,000. Her parents provide all support. Is she a QC?",
@@ -160,9 +160,9 @@
     "rejected": "No, Megan cannot claim Evan because a child must live with the taxpayer for more than half of the year to be a Qualifying Child under § 152(c)(1)(B)."
   },
   {
-    "prompt": "Fact Pattern: Sarah is a full-time student who was enrolled in university from January through May (5 months). She is 23 and lives with her parents. She earned $10,000. Do her parents meet the age test to claim her as a Qualifying Child?",
-    "chosen": "Yes, the age test is met. Under § 152(f)(2), a 'student' is an individual who is a full-time student for parts of 5 calendar months during the year. Since Sarah was a student for 5 months and has not attained age 24, she satisfies the age requirement of § 152(c)(3)(A)(ii).",
-    "rejected": "No, Sarah does not meet the age test because she must be a student for the entire duration of the taxable year to qualify for the age 24 extension."
+    "prompt": "Fact Pattern: Sarah is a full-time student who was enrolled in university from January through May (5 months). She is 24 and lives with her parents. She earned $10,000. Do her parents meet the age test to claim her as a Qualifying Child?",
+    "chosen": "No, Sarah does not meet the age test. Under § 152(c)(3)(A)(ii), a student must not have attained age 24 by the close of the calendar year. Since Sarah is exactly 24, she fails the QC age requirement. Furthermore, she fails as a Qualifying Relative because her $10,000 income exceeds the gross income limit.",
+    "rejected": "Yes, the age test is met because Sarah was a student for 5 months and the age limit for students is inclusive of age 24."
   },
   {
     "prompt": "Fact Pattern: Mark and Jenny are divorced. Their son, Sam, lives with Jenny for 8 months. Jenny signs a written waiver (Form 8332) releasing the claim to Mark. Mark provides $3,000 in support. Can Mark claim Sam?",
@@ -170,9 +170,9 @@
     "rejected": "No, Mark cannot claim Sam because Sam lived with Jenny for the majority of the year, and § 152(c)(4)(B) gives the custodial parent absolute priority."
   },
   {
-    "prompt": "Fact Pattern: Paul supports his 20-year-old daughter, Amy, who is married. Amy and her husband file a joint return only to get a refund of their $500 in withheld wages. They have no tax liability. Can Paul claim Amy?",
-    "chosen": "Yes, Paul can claim Amy. Although § 152(c)(1)(E) generally prohibits claiming a child who files a joint return, § 152(c)(1)(E) and § 152(b)(2) allow an exception if the return is filed 'other than only for a claim of refund.' Since they filed solely for a refund, the claim is valid.",
-    "rejected": "No, Paul is disqualified from claiming Amy because she filed a joint return with her spouse, which is a hard disqualifier under § 152(b)(2)."
+    "prompt": "Fact Pattern: Paul supports his 20-year-old daughter, Amy, who is married. Amy and her husband file a joint return to report their income and pay a $200 tax liability. Can Paul claim Amy?",
+    "chosen": "No, Paul cannot claim Amy. Under § 152(b)(2), an individual is not a dependent if they file a joint return with a spouse. The exception for returns filed 'only for a claim of refund' does not apply here because the couple had an actual tax liability.",
+    "rejected": "Yes, Paul can claim Amy because she is his child, is under age 24, and he provided more than half of her support."
   },
   {
     "prompt": "Fact Pattern: Gary provides 70% support for his grandfather, Silas. Silas lives in a nursing home. Silas earned $3,000 in taxable pension. Is Silas Gary's dependent?",
@@ -195,9 +195,9 @@
     "rejected": "Yes, because the parents are legally divorced, § 152(e) applies regardless of their living arrangements during the latter part of the year."
   },
   {
-    "prompt": "Fact Pattern: Kevin is 18 and lived with his uncle all year. The uncle provided all support. Kevin's parents are dead. Does Kevin meet the relationship test for a Qualifying Child of the uncle?",
-    "chosen": "Yes, Kevin meets the test. Under § 152(c)(2)(B), a descendant of a brother or sister of the taxpayer (a nephew) bears a qualifying relationship to the taxpayer for QC purposes.",
-    "rejected": "No, a nephew only qualifies as a 'Qualifying Relative' under § 152(d) and cannot be a 'Qualifying Child' because he is not the taxpayer's son or daughter."
+    "prompt": "Fact Pattern: Kevin (18) lived with his uncle for 5 months this year. The uncle provided all support during that time. Kevin's parents are deceased. Does Kevin meet the residency test for a Qualifying Child of the uncle?",
+    "chosen": "No, Kevin fails the residency test. Under § 152(c)(1)(B), a Qualifying Child must have the same principal place of abode as the taxpayer for more than one-half of the taxable year (over 6 months). Five months is insufficient to qualify.",
+    "rejected": "Yes, Kevin meets the test because he is a descendant of the taxpayer's sibling and the uncle provided his total financial support."
   },
   {
     "prompt": "Fact Pattern: Victor provides $10,000 in support for his mother. His mother also receives $11,000 in tax-exempt Social Security which she uses for her own rent. Is the mother Victor's dependent?",
