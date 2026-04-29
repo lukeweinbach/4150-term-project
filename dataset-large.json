@@ -35,9 +35,9 @@
     "rejected": "Yes, Gary can claim Phil because Gary provides over half of Phil's support and Phil's income is below the exemption threshold."
   },
   {
-    "prompt": "Fact Pattern: Tina is 18 and lives with her grandmother and mother. The mother earned $12,000; the grandmother earned $45,000. Both claim Tina. Who is entitled to the claim?",
-    "chosen": "The mother is entitled to the claim. Under § 152(c)(4)(A)(i), if a parent and a non-parent both claim a child as a QC, the child is treated as the qualifying child of the parent.",
-    "rejected": "The grandmother is entitled to the claim because her adjusted gross income is higher than the mother's."
+    "prompt": "Fact Pattern: Tina is 18 and lives with her grandmother and mother. The mother earned $12,000; the grandmother earned $45,000. Both claim Tina. Can the grandmother claim Tina?",
+    "chosen": "No, the grandmother cannot claim Tina. Under § 152(c)(4)(A)(i), if a parent and a non-parent both claim a child as a QC, the child is treated as the qualifying child of the parent.",
+    "rejected": "Yes, the grandmother is entitled to the claim because her adjusted gross income is higher than the mother's."
   },
   {
     "prompt": "Fact Pattern: Ben provides 60% support for his father, Abe. Abe received $15,000 in non-taxable Social Security and $3,000 in taxable interest. Is Abe Ben's dependent?",
@@ -60,9 +60,9 @@
     "rejected": "No, Elena is not a dependent because she is not a US citizen and does not reside in the United States."
   },
   {
-    "prompt": "Fact Pattern: Mark and Sarah are divorced. Toby (10) lives with Mark for 7 months and Sarah for 5 months. Sarah's AGI is $150,000; Mark's is $40,000. Both claim Toby. Who wins?",
-    "chosen": "Mark wins. Under § 152(c)(4)(B)(i), if parents claim a child and do not file a joint return, the claim goes to the parent with whom the child resided for the longest period of time.",
-    "rejected": "Sarah wins because the tie-breaker rules prioritize the parent with the highest adjusted gross income when both claim the child."
+    "prompt": "Fact Pattern: Mark and Sarah are divorced. Toby (10) lives with Mark for 7 months and Sarah for 5 months. Sarah's AGI is $150,000; Mark's is $40,000. Both claim Toby. Can Sarah claim Toby?",
+    "chosen": "No, Sarah cannot claim Toby. Under § 152(c)(4)(B)(i), if parents claim a child and do not file a joint return, the claim goes to the parent with whom the child resided for the longest period of time.",
+    "rejected": "Yes, Sarah can claim Toby because the tie-breaker rules prioritize the parent with the highest adjusted gross income when both claim the child."
   },
   {
     "prompt": "Fact Pattern: Julia supports her friend, Beth, who moved in on February 1st and stayed through December 31st. Beth had no income and Julia provided all support. Is Beth Julia's dependent?",
@@ -145,9 +145,9 @@
     "rejected": "Yes, the individual can be a QR because they meet the relationship and support tests, and $4,800 is a negligible amount."
   },
   {
-    "prompt": "Fact Pattern: Child lives with Parent A for 183 days and Parent B for 182 days. Parent B has higher AGI. Both claim the child. Who wins?",
-    "chosen": "Parent A wins. Under § 152(c)(4)(B)(i), the parent with whom the child resided for the longest period of time (183 vs 182) is entitled to the claim.",
-    "rejected": "Parent B wins because in a tie-breaker between parents, the one with the higher adjusted gross income always takes precedence."
+    "prompt": "Fact Pattern: A child lives with Parent A for 183 days and Parent B for 182 days. Parent B has a higher AGI. Both claim the child. Can Parent B claim the child?",
+    "chosen": "No, Parent B cannot claim the child. Under § 152(c)(4)(B)(i), the parent with whom the child resided for the longest period of time (Parent A) is entitled to the claim.",
+    "rejected": "Yes, Parent B wins because in a tie-breaker between parents, the one with the higher adjusted gross income always takes precedence."
   },
   {
     "prompt": "Fact Pattern: Leo supports his father-in-law, Arthur. Arthur does not live with Leo and earns $2,000 in taxable income. Leo provides 60% of Arthur's support. Is Arthur Leo's dependent?",
@@ -230,9 +230,9 @@
     "rejected": "No, a brother-in-law is only a qualifying relative if he lives with the taxpayer for the entire year under § 152(d)(2)(H)."
   },
   {
-    "prompt": "Fact Pattern: A father, Sam, provides $5,000 for his son's support. The son's grandmother provides $6,000. The son lives with Sam. Who is the only person who can claim the son as a Qualifying Child?",
-    "chosen": "Sam is the only person. Under § 152(c)(1)(D), a QC must not provide half of their *own* support. The code does not require the *taxpayer* to provide more than half for a QC. Since the son lives with Sam and is his child, Sam meets the QC tests.",
-    "rejected": "The grandmother is the only person who can claim him because she provided more than half of the support, which is the primary test for dependency."
+    "prompt": "Fact Pattern: A father, Sam, provides $5,000 for his son's support. The son's grandmother provides $6,000. The son lives with Sam. Can the grandmother claim the son as a Qualifying Child over Sam?",
+    "chosen": "No, the grandmother cannot claim him as a Qualifying Child over Sam. Under § 152(c)(1)(D), a QC must not provide half of their own support. The code does not require the taxpayer to provide more than half for a QC. If both claim him, the parent wins under the tie-breaker rules.",
+    "rejected": "Yes, the grandmother can claim him because she provided more than half of the support, which is the primary test for dependency."
   },
   {
     "prompt": "Fact Pattern: Beth (22) is a student. She earns $10,000 from a job and uses $5,000 for her own support. Her parents provide $6,000. Does she meet the support test for a Qualifying Child?",
